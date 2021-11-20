@@ -1,6 +1,6 @@
 import {BrowserRouter as Router,Route,Routes} from 'react-router-dom';
 import './App.css';
-import Home from './Containers/Home';
+// import Home from './Containers/Home';
 import Login from './Containers/Login';
 import OpenStreetMap from './Containers/OpenStreetMap';
 import Register from './Containers/Register';
