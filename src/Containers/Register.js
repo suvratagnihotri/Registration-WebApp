@@ -37,6 +37,11 @@ export default function Register(){
         if(response.status === 200){
           navigate("../home", { replace: true });
         }
+        if(response.status === 400){
+          return (
+            <div className="message">User Already registered</div>
+          );
+        }
       });
     }
     return (
