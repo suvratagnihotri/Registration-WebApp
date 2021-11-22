@@ -1,4 +1,3 @@
-import { MapContainer, TileLayer} from 'react-leaflet';
 import 'leaflet/dist/leaflet.css';
 import { MapsComponent, LayersDirective, NavigationLineDirective, LayerDirective, Zoom, MarkersDirective, NavigationLine, NavigationLinesDirective, MarkerDirective, Marker, Inject } from '@syncfusion/ej2-react-maps';
 
@@ -9,18 +8,9 @@ export default function OpenStreetMap(){
         console.log("Latitude is :", latitude);
         console.log("Longitude is :",longitude );
       });
-    function MapPlaceholder() {
-        return (
-          <p>
-            Map of London.{' '}
-            <noscript>You need to enable JavaScript to see this map.</noscript>
-          </p>
-        )
-      }
-    // const position = [51.505, -0.09]
-    // 28.7041° N, 77.1025° E
     return(
-        <MapsComponent id="maps" zoomSettings={{ enable: true, toolbars: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset'] }}>
+        
+        <MapsComponent style={{width:100,height:100}} id="maps" doubleClick={true} scrollWheelZoom = { true } zoomSettings={{ enable: true, toolbars: ['Zoom', 'ZoomIn', 'ZoomOut', 'Pan', 'Reset'] }}>
             {/* <Inject services={[Zoom]}/> */}
             <Inject services={[Marker, NavigationLine, Zoom]}/>
                 <LayersDirective>

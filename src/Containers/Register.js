@@ -34,7 +34,7 @@ export default function Register(){
       .then(response => {
         console.log(response)
         console.log(response.status)
-        if(response.status === 200){
+        if(response.status === 202){
           navigate("../home", { replace: true });
         }
         if(response.status === 400){
