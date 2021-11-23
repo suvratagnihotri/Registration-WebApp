@@ -69,7 +69,7 @@ export default function Register(){
             <Form.Label>Password</Form.Label>
             <Form.Control
               type="password"
-              value={password}
+                value={password}
               onChange={(e) => setPassword(e.target.value)}
             />
           </Form.Group>
@@ -77,15 +77,15 @@ export default function Register(){
             <Form.Label>Location</Form.Label>
             <Form.Control
               type="text"
-              value={location}
+                value={location}
               onChange={(e) => setLocation(e.target.value)}
             />
           </Form.Group>
           <Button block size="lg" type="submit" disabled={!validateForm()}>
             Register
           </Button>
-          <Button block size="lg" type="submit">
-            GOTO Login
+                <Button block size="lg" type="submit">
+              GOTO Login
           </Button>
         </Form>
       </div>
